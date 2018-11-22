@@ -25,46 +25,6 @@ We have language bindings in Shell, Ruby, Python, and JavaScript! You can view c
 
 # Authentication
 
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-# Klienci
-
 ## Get Access token
 
 ```ruby
@@ -125,6 +85,8 @@ password | - | Qq1;qq.
 <aside class="success">
 Remember — content-type: application/x-www-form-urlencoded
 </aside>
+
+# Klienci
 
 ## Get Klient info
 
@@ -227,3 +189,118 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
+# Lokacje
+
+## Get all Lokacje
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```shell
+curl "http://example.com/api/kittens/2"
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+let max = api.kittens.get(2);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "Id":4,
+  "Latitude":123.123,
+  "Longitude":456.46778
+},
+{
+  "Id":5,
+  "Latitude":13.13,
+  "Longitude":56.4678
+}
+```
+
+This endpoint retrieves all Lokacje.
+
+### HTTP Request
+
+`GET http://ulotkyyy.gear.host/api/lokacja`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+
+## Get all Lokacje pomiedzy x1,y1 - x2,y2
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```shell
+curl "http://example.com/api/kittens/2"
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+let max = api.kittens.get(2);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "Id":4,
+  "Latitude":123.123,
+  "Longitude":456.46778
+},
+{
+  "Id":5,
+  "Latitude":13.13,
+  "Longitude":56.4678
+}
+```
+
+This endpoint retrieves Lokacje pomiedzy x1,y1 - x2,y2.
+
+<aside class="warning">authorization: bearer abc....</aside>
+
+### HTTP Request
+
+`GET http://ulotkyyy.gear.host/api/lokacja`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+lat1 | 1.0
+lng1 | 1.0
+lat2 | 100.0
+lng2 | 100.0
