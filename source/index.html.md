@@ -46,7 +46,7 @@ This endpoint retrieves access token for user.
 
 ### HTTP Request
 
-`POST http://ulotkyyy.gear.host/token`
+`POST http://ulotky.azurewebsites.net/token`
 
 ### Query Parameters
 
@@ -80,7 +80,7 @@ This endpoint retrieves Klient info based on authorization.
 
 ### HTTP Request
 
-`GET http://ulotkyyy.gear.host/api/Account/UserInfo`
+`GET http://ulotky.azurewebsites.net/api/Account/UserInfo`
 
 ### URL Parameters
 
@@ -110,7 +110,7 @@ This endpoint retrieves all Lokacje.
 
 ### HTTP Request
 
-`GET http://ulotkyyy.gear.host/api/lokacja`
+`GET http://ulotky.azurewebsites.net/api/lokacja`
 
 ### URL Parameters
 
@@ -142,7 +142,7 @@ This endpoint retrieves Lokacje pomiedzy x1,y1 - x2,y2.
 
 ### HTTP Request
 
-`GET http://ulotkyyy.gear.host/api/lokacja`
+`GET http://ulotky.azurewebsites.net/api/lokacja`
 
 ### URL Parameters
 
@@ -152,3 +152,165 @@ lat1 | 1.0
 lng1 | 1.0
 lat2 | 100.0
 lng2 | 100.0
+
+# Ulotki
+
+## Get all Ulotki
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "Id":1,
+  "Url":123.jpg
+},
+{
+  "Id":2,
+  "Url":456.jpg
+}
+```
+
+This endpoint retrieves all Ulotki.
+
+### HTTP Request
+
+`GET http://ulotky.azurewebsites.net/api/ulotka`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+
+## Get Ulotka url
+
+> The above command returns JSON structured like this:
+
+```json
+"http://ulotky.azurewebsites.net/Ulotky/123.JPG"
+```
+
+This endpoint retrieves Ulotka url.
+
+### HTTP Request
+
+`GET http://ulotky.azurewebsites.net/api/ulotka/{id}`
+
+### URL Parameters
+
+Parameter | Description
+id | 1
+
+# Dashboard
+
+## Get ilosc obejrzen w lokacjach
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "ilosc":21,
+  "LokacjaId":14
+},
+{
+  "ilosc":10,
+  "LokacjaId":15
+}
+```
+
+This endpoint retrieves ilosc obejrzen w lokacjach.
+
+### HTTP Request
+
+`GET http://ulotky.azurewebsites.net/api/dashboard/lokacje`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+
+## Get ilosc obejrzen przez mezczyzn
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "1":0.625
+}
+```
+
+This endpoint retrieves ilosc obejrzen przez mezczyzn.
+
+### HTTP Request
+
+`GET http://ulotky.azurewebsites.net/api/dashboard/men`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+
+## Get ilosc obejrzen danej ulotki w kolejnych dniach
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "Data":"2018-12-23T00:00:00",
+  "ilosc":"20"
+},
+{
+  "Data":"2018-12-24T00:00:00",
+  "ilosc":"15"
+}
+```
+
+This endpoint retrieves ilosc obejrzen danej ulotki w kolejnych dniach.
+
+### HTTP Request
+
+`GET http://ulotky.azurewebsites.net/api/dashboard/dni/{id}`
+
+### URL Parameters
+
+Parameter | Description
+id | 1
+
+## Get ilosc obejrzen w kampaniach autoryzowanego usera
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id":1,
+  "total":71,
+  "zostalo":39
+},
+{
+  "id":2,
+  "total":1000,
+  "zostalo":1000
+}
+```
+
+This endpoint retrieves ilosc obejrzen w kampaniach autoryzowanego usera.
+
+### HTTP Request
+
+`GET http://ulotky.azurewebsites.net/api/dashboard/kampanie`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+
+# Rezerwacja lokacji (kampania)
+
+## Get kampanie autoryzowanego usera
+
+## Post nowa kampanie
+
+# Sklep
+
+## Get itemy w sklepie
+
+## Post kup item w sklepie
