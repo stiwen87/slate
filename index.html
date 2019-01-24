@@ -252,6 +252,56 @@
               </ul>
           </li>
           <li>
+            <a href="#ulotki" class="toc-h1 toc-link" data-title="Ulotki">Ulotki</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-ulotki" class="toc-h2 toc-link" data-title="Get all Ulotki">Get all Ulotki</a>
+                  </li>
+                  <li>
+                    <a href="#get-ulotka-url" class="toc-h2 toc-link" data-title="Get Ulotka url">Get Ulotka url</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#dashboard" class="toc-h1 toc-link" data-title="Dashboard">Dashboard</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-ilosc-obejrzen-w-lokacjach" class="toc-h2 toc-link" data-title="Get ilosc obejrzen w lokacjach">Get ilosc obejrzen w lokacjach</a>
+                  </li>
+                  <li>
+                    <a href="#get-ilosc-obejrzen-przez-mezczyzn" class="toc-h2 toc-link" data-title="Get ilosc obejrzen przez mezczyzn">Get ilosc obejrzen przez mezczyzn</a>
+                  </li>
+                  <li>
+                    <a href="#get-ilosc-obejrzen-danej-ulotki-w-kolejnych-dniach" class="toc-h2 toc-link" data-title="Get ilosc obejrzen danej ulotki w kolejnych dniach">Get ilosc obejrzen danej ulotki w kolejnych dniach</a>
+                  </li>
+                  <li>
+                    <a href="#get-ilosc-obejrzen-w-kampaniach-autoryzowanego-usera" class="toc-h2 toc-link" data-title="Get ilosc obejrzen w kampaniach autoryzowanego usera">Get ilosc obejrzen w kampaniach autoryzowanego usera</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#rezerwacja-lokacji-kampania" class="toc-h1 toc-link" data-title="Rezerwacja lokacji (kampania)">Rezerwacja lokacji (kampania)</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-kampanie-autoryzowanego-usera" class="toc-h2 toc-link" data-title="Get kampanie autoryzowanego usera">Get kampanie autoryzowanego usera</a>
+                  </li>
+                  <li>
+                    <a href="#post-nowa-kampanie" class="toc-h2 toc-link" data-title="Post nowa kampanie">Post nowa kampanie</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#sklep" class="toc-h1 toc-link" data-title="Sklep">Sklep</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-itemy-w-sklepie" class="toc-h2 toc-link" data-title="Get itemy w sklepie">Get itemy w sklepie</a>
+                  </li>
+                  <li>
+                    <a href="#post-kup-item-w-sklepie" class="toc-h2 toc-link" data-title="Post kup item w sklepie">Post kup item w sklepie</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -284,7 +334,7 @@
 </span></code></pre>
 <p>This endpoint retrieves access token for user.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://ulotkyyy.gear.host/token</code></p>
+<p><code>POST http://ulotky.azurewebsites.net/token</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -327,7 +377,7 @@ Remember — content-type: application/x-www-form-urlencoded
 
 <aside class="warning">authorization: bearer abc....</aside>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://ulotkyyy.gear.host/api/Account/UserInfo</code></p>
+<p><code>GET http://ulotky.azurewebsites.net/api/Account/UserInfo</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -353,7 +403,7 @@ Remember — content-type: application/x-www-form-urlencoded
 </span></code></pre>
 <p>This endpoint retrieves all Lokacje.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET http://ulotkyyy.gear.host/api/lokacja</code></p>
+<p><code>GET http://ulotky.azurewebsites.net/api/lokacja</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -381,7 +431,7 @@ Remember — content-type: application/x-www-form-urlencoded
 
 <aside class="warning">authorization: bearer abc....</aside>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET http://ulotkyyy.gear.host/api/lokacja</code></p>
+<p><code>GET http://ulotky.azurewebsites.net/api/lokacja</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -406,7 +456,131 @@ Remember — content-type: application/x-www-form-urlencoded
 <td>100.0</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
+<h1 id='ulotki'>Ulotki</h1><h2 id='get-all-ulotki'>Get all Ulotki</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Url"</span><span class="p">:</span><span class="mi">123</span><span class="err">.jpg</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"Id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Url"</span><span class="p">:</span><span class="mi">456</span><span class="err">.jpg</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Ulotki.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET http://ulotky.azurewebsites.net/api/ulotka</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='get-ulotka-url'>Get Ulotka url</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="s2">"http://ulotky.azurewebsites.net/Ulotky/123.JPG"</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves Ulotka url.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET http://ulotky.azurewebsites.net/api/ulotka/{id}</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<p>Parameter | Description
+id | 1</p>
+<h1 id='dashboard'>Dashboard</h1><h2 id='get-ilosc-obejrzen-w-lokacjach'>Get ilosc obejrzen w lokacjach</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"ilosc"</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"LokacjaId"</span><span class="p">:</span><span class="mi">14</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"ilosc"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"LokacjaId"</span><span class="p">:</span><span class="mi">15</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves ilosc obejrzen w lokacjach.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET http://ulotky.azurewebsites.net/api/dashboard/lokacje</code></p>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='get-ilosc-obejrzen-przez-mezczyzn'>Get ilosc obejrzen przez mezczyzn</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"1"</span><span class="p">:</span><span class="mf">0.625</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves ilosc obejrzen przez mezczyzn.</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET http://ulotky.azurewebsites.net/api/dashboard/men</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='get-ilosc-obejrzen-danej-ulotki-w-kolejnych-dniach'>Get ilosc obejrzen danej ulotki w kolejnych dniach</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Data"</span><span class="p">:</span><span class="s2">"2018-12-23T00:00:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ilosc"</span><span class="p">:</span><span class="s2">"20"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"Data"</span><span class="p">:</span><span class="s2">"2018-12-24T00:00:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ilosc"</span><span class="p">:</span><span class="s2">"15"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves ilosc obejrzen danej ulotki w kolejnych dniach.</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET http://ulotky.azurewebsites.net/api/dashboard/dni/{id}</code></p>
+<h3 id='url-parameters-8'>URL Parameters</h3>
+<p>Parameter | Description
+id | 1</p>
+<h2 id='get-ilosc-obejrzen-w-kampaniach-autoryzowanego-usera'>Get ilosc obejrzen w kampaniach autoryzowanego usera</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"total"</span><span class="p">:</span><span class="mi">71</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"zostalo"</span><span class="p">:</span><span class="mi">39</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"total"</span><span class="p">:</span><span class="mi">1000</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"zostalo"</span><span class="p">:</span><span class="mi">1000</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves ilosc obejrzen w kampaniach autoryzowanego usera.</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET http://ulotky.azurewebsites.net/api/dashboard/kampanie</code></p>
+<h3 id='url-parameters-9'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h1 id='rezerwacja-lokacji-kampania'>Rezerwacja lokacji (kampania)</h1><h2 id='get-kampanie-autoryzowanego-usera'>Get kampanie autoryzowanego usera</h2><h2 id='post-nowa-kampanie'>Post nowa kampanie</h2><h1 id='sklep'>Sklep</h1><h2 id='get-itemy-w-sklepie'>Get itemy w sklepie</h2><h2 id='post-kup-item-w-sklepie'>Post kup item w sklepie</h2><h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
